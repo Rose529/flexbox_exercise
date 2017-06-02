@@ -3,3 +3,116 @@
 	margin: 0;
 	padding: 0;
 }
+
+
+body {
+padding-top: 50px;
+}
+
+h2 {
+	text-align: center;
+}
+
+.top-nav {
+	display: flex;
+	background: #000;
+	min-height:50px; /*  new */
+	overflow: hidden;/* */
+	height: 50px;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+
+}
+
+.top-nav a {
+	color: #fff;
+	text-decoration: none; 
+	border-bottom: 3px solid #000;
+	transition: .5s;
+
+}
+
+.top-nav a:hover {
+	color: #047dbf;
+	border-bottom: 3px solid #047dbf;
+} 
+
+.brand-text {
+	font-size: 30px;
+	margin-left: 15px;
+}
+
+.top-nav-list {
+	display: flex;
+	list-style: none;
+	margin-left: auto;
+
+}
+
+.top-nav-list li {
+	margin: 0px 15px;
+	
+}
+.top-nav-list a {
+	padding: 5px;
+}
+
+.full-screen-bg {
+	height: calc(100vh - 50px);
+	display: flex;
+	width: 100%;
+	background-image: url("../images/roses_large.jpeg");/* adds image */
+	background-size: cover;
+	background-position: center;
+	justify-content: center; /* horizontal */
+	align-items: center; /* verticle */
+	color: #767273;
+	transition: background-image .5s;
+}
+
+.img {
+	border-radius: 50%;
+	width: 100%;
+}
+
+.flex-row {
+	display: flex;
+}
+
+.col-4-2-1 {
+	width: 23%;
+	margin: 1%;
+	padding: 10px;
+
+}
+
+@media (max-width: 1200px) { /* images adapts to web browser size */
+	.full-screen-bg {
+		background-image: url("../images/roses_medium.jpeg");
+
+	}
+	.flex-row {
+		flex-wrap: wrap;
+	}
+
+	.col-4-2-1 {
+		width: 48%;
+
+	}
+}
+
+@media (max-width: 600px) {
+	.top-nav {
+		display: block;
+	}
+	.full-screen-bg {
+		background-image: url("../images/roses_small.jpeg");
+	}
+
+	.col-4-2-1 {
+		width: 98%;
+	}
+}

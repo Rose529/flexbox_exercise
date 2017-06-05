@@ -7,11 +7,18 @@
 
 body {
 padding-top: 50px;
+background-color: #DAABC2;
 }
 
 h2 {
 	text-align: center;
+	color: #fff;
 }
+
+/* trying to give hover effect
+h2 a:hover {
+	color: #047dbf;
+}*/
 
 .top-nav {
 	display: flex;
@@ -56,6 +63,8 @@ h2 {
 	margin: 0px 15px;
 	
 }
+
+
 .top-nav-list a {
 	padding: 5px;
 }
@@ -64,12 +73,12 @@ h2 {
 	height: calc(100vh - 50px);
 	display: flex;
 	width: 100%;
-	background-image: url("../images/roses_large.jpeg");/* adds image */
+	background-image: url("../images/chain_large.jpeg");/* adds image */
 	background-size: cover;
 	background-position: center;
 	justify-content: center; /* horizontal */
 	align-items: center; /* verticle */
-	color: #767273;
+	color: #fff;
 	transition: background-image .5s;
 }
 
@@ -86,12 +95,78 @@ h2 {
 	width: 23%;
 	margin: 1%;
 	padding: 10px;
+	border-style: groove;
+	border: 7px solid #C6B89E;
 
 }
 
+.img-hover-container {
+	width: 55%;
+	min-width: 350px;
+	margin: 50px auto;
+	position: relative;
+	/*border-style: groove;
+	border: 7px solid #C6B89E;*/
+
+
+}
+
+.img-hover-container img {
+	width: 95%;
+	border-radius: 50%;
+	border-style: groove;
+	border: 7px solid #C6B89E;
+
+
+}
+
+.img-hover-container p {
+	width: 100%;
+	bottom: 10px;
+	left: 10%;
+	text-align: center;
+	padding: 10px;
+	color: #fff;
+	opacity: 0;
+	transition: .5s;
+}
+
+.img-hover-container:hover img {
+	filter: brightness(50%);
+}
+
+.img-hover-container:hover p {
+	opacity: 1;
+	transition: .5s;
+}
+
+.sign-up-content {
+	padding: 20px;
+	margin: 20px;
+	background-color: #DAABC2;
+	font-family: serif;
+	font-size: 18px;
+	line-height: 34px;
+	text-align: center;
+	color: #fff;
+	border-style: groove;
+	border: 7px solid #C6B89E;
+
+}
+
+label {
+	display: block;
+}
+
+textarea {
+	height: 150px;
+	width: 250px;
+}
+
+
 @media (max-width: 1200px) { /* images adapts to web browser size */
 	.full-screen-bg {
-		background-image: url("../images/roses_medium.jpeg");
+		background-image: url("../images/beach_medium.jpeg");
 
 	}
 	.flex-row {
@@ -109,7 +184,7 @@ h2 {
 		display: block;
 	}
 	.full-screen-bg {
-		background-image: url("../images/roses_small.jpeg");
+		background-image: url("../images/splash_small.jpeg");
 	}
 
 	.col-4-2-1 {
